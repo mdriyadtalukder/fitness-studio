@@ -1,0 +1,15 @@
+.error-title {
+    font-size: 80px;
+}
+
+.error-title i {
+    color: #ffa600;
+}
+
+.error {
+    padding-top: 120px !important;
+}
+
+.btn {
+    background-color: #1CB0E6 !important;
+}
