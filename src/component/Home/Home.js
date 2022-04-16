@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Banner from './Banner/Banner';
 import Services from './Services/Services';
 import './Home.css'
+import Result from './Result/Result';
 
 const Home = () => {
     return (
@@ -27,7 +28,7 @@ const Home = () => {
                 </div>
             </section>
             <Services></Services>
-            
+            <Result></Result>
         </div>
     );
 };
