@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Header.css'
 const Header = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" sticky='top'>
             <Container>
                 <Navbar.Brand as={Link} className='fw-bold fs-2' style={{ color: "#1CB0E6" }} to="/">JACK FITNESS STUDIO</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

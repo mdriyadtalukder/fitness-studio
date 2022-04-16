@@ -1,0 +1,9 @@
+.checkout{
+    background-color: #1CB0E6 !important;
+    color: white !important;
+}
+.checkout:hover{
+    background-color: white !important;
+    color: #1CB0E6 !important;
+    border: 1px solid #1CB0E6;
+}

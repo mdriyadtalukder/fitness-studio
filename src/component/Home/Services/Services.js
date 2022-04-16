@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import Service from './Service';
 
 const Services = () => {
@@ -10,7 +11,7 @@ const Services = () => {
     }, [])
     return (
         <div className='container'>
-            <h1 className='text-center pt-4 pb-3 fw-bold'>Services</h1>
+            <h1 className='text-center mt-5 pt-4 pb-3 fw-bold'>SERVICES</h1>
             <div className='row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 pt-4 pb-4'>
                 {
                     services.map(service => <Service key={service.id} service={service}></Service>)
