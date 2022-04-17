@@ -41,25 +41,27 @@ const SignUp = () => {
         await updateProfile({ displayName: name });
     }
     return (
-        <Form onSubmit={signup} id='signup-form' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
-            <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Label>Your name</Form.Label>
-                <Form.Control ref={nameInput} type="text" placeholder="Enter name" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control ref={emailInput} type="email" placeholder="Enter email" />
-            </Form.Group>
+        <div id='signup-form' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
+            <Form onSubmit={signup} >
+                <Form.Group className="mb-3" controlId="formBasicName">
+                    <Form.Label>Your name</Form.Label>
+                    <Form.Control ref={nameInput} type="text" placeholder="Enter name" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control ref={emailInput} type="email" placeholder="Enter email" />
+                </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control ref={passwordInput} type="password" placeholder="Password" />
-            </Form.Group>
-            {errors}
-            <button className='btn signup-btn w-100'>Sign Up</button>
-            <p className='pt-4'>Already have an account? <Link to='/login' style={{ color: '#1CB0E6' }} className='text-decoration-none'>Please log in </Link></p>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control ref={passwordInput} type="password" placeholder="Password" />
+                </Form.Group>
+                {errors}
+                <button className='btn signup-btn w-100'>Sign Up</button>
+                <p className='pt-4'>Already have an account? <Link to='/login' style={{ color: '#1CB0E6' }} className='text-decoration-none'>Please log in </Link></p>
+            </Form>
             <Social></Social>
-        </Form>
+        </div>
     );
 };
 

@@ -55,25 +55,27 @@ const LogIn = () => {
         }
     }
     return (
-        <Form onSubmit={login} id='login-form' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control ref={emailInput} type="email" placeholder="Enter email" />
-            </Form.Group>
+        <div id='login-form' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
+            <Form onSubmit={login}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control ref={emailInput} type="email" placeholder="Enter email" />
+                </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control ref={passwordInput} type="password" placeholder="Password" />
-            </Form.Group>
-            {errors}
-            <button className=' btn login-btn w-100'>Log In</button>
-            <div className="text-center pt-2">
-                <button onClick={forgetPassword} className='forget btn'>Forget password?</button>
-            </div>
-            <p >New to jack fitness studio? <Link to='/signup' style={{ color: '#1CB0E6' }} className='text-decoration-none'>Please sign up </Link></p>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control ref={passwordInput} type="password" placeholder="Password" />
+                </Form.Group>
+                {errors}
+                <button className=' btn login-btn w-100'>Log In</button>
+                <div className="text-center pt-2">
+                    <button onClick={forgetPassword} className='forget btn'>Forget password?</button>
+                </div>
+                <p >New to jack fitness studio? <Link to='/signup' style={{ color: '#1CB0E6' }} className='text-decoration-none'>Please sign up </Link></p>
+            </Form>
             <Social></Social>
             <ToastContainer ></ToastContainer>
-        </Form>
+        </div>
     );
 };
 

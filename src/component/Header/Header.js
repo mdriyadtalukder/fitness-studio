@@ -6,13 +6,7 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Header.css'
 const Header = () => {
-    const [user, loading] = useAuthState(auth);
-    if (loading) {
-        return <div className='d-flex justify-content-center align-items-center mt-5'>
-            <Spinner animation="border" variant="info" />
-        </div>
-
-    }
+    const [user] = useAuthState(auth);
     const signout = () => {
         signOut(auth);
     }
