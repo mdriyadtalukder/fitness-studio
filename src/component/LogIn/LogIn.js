@@ -55,7 +55,7 @@ const LogIn = () => {
         }
     }
     return (
-        <Form onSubmit={login} className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
+        <Form onSubmit={login} id='login-form' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control ref={emailInput} type="email" placeholder="Enter email" />

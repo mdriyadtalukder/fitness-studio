@@ -41,7 +41,7 @@ const SignUp = () => {
         await updateProfile({ displayName: name });
     }
     return (
-        <Form onSubmit={signup} className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
+        <Form onSubmit={signup} id='signup-form' className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
             <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Your name</Form.Label>
                 <Form.Control ref={nameInput} type="text" placeholder="Enter name" />

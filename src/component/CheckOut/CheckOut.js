@@ -28,7 +28,7 @@ const CheckOut = () => {
     return (
         <div className='container'>
             <h1 className='text-center fw-bold pt-3'>Fill up the form</h1>
-            <Form onSubmit={fillUp} className='submit-form w-25 p-lg-5 mx-auto rounded mt-4 shadow-lg'>
+            <Form onSubmit={fillUp} id='submit-form' className='submit-form w-25 p-lg-5 mx-auto rounded mt-4 shadow-lg'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control ref={emailInput} type="email" placeholder="Enter email" />

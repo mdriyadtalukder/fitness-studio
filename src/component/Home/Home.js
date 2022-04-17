@@ -5,8 +5,6 @@ import Services from './Services/Services';
 import './Home.css'
 import Result from './Result/Result';
 import Footer from '../Footer/Footer';
-import { Spinner } from 'react-bootstrap';
-
 const Home = () => {
     return (
         <div>
