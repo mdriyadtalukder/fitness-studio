@@ -1,9 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import CheckOut from './component/CheckOut/CheckOut';
 import Erorr from './component/Erorr/Erorr';
 import Header from './component/Header/Header';
 import Home from './component/Home/Home';
 import LogIn from './component/LogIn/LogIn';
+import RequireAuth from './component/RequireAuth/RequireAuth';
 import SignUp from './component/SignUp/SignUp';
 
 function App() {
@@ -11,14 +13,19 @@ function App() {
     <div>
       <Header></Header>
       <Routes>
-      <Route path='/' element={<Home></Home>}></Route>
-      <Route path='/login' element={<LogIn></LogIn>}></Route>
-      <Route path='/signup' element={<SignUp></SignUp>}></Route>
-      <Route path='*' element={<Erorr></Erorr>}></Route>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/login' element={<LogIn></LogIn>}></Route>
+        <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/checkout' element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
+        <Route path='*' element={<Erorr></Erorr>}></Route>
       </Routes>
-      </div>
-        
-        );
+    </div>
+
+  );
 }
 
-        export default App;
+export default App;

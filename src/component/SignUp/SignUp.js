@@ -1,25 +1,47 @@
 import React, { useRef } from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, Spinner } from 'react-bootstrap';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
+import Social from '../Social/Social';
+import './SignUp.css'
 
 const SignUp = () => {
-    const emailInput=useRef('');
-    const nameInput=useRef('');
-    const passwordInput=useRef('');
-    const navigate=useNavigate();
-//  if(user){
-//      navigate('/');
-//  }
-    const signup=event=>{
+    const emailInput = useRef('');
+    const nameInput = useRef('');
+    const passwordInput = useRef('');
+    const navigate = useNavigate();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, error1] = useUpdateProfile(auth);
+    let errors;
+    if (error || error1) {
+        errors = <p className='text-danger'>Error: {error?.message} {error1?.message}</p>
+    }
+
+    if (loading || updating) {
+        return <div className='d-flex justify-content-center align-items-center mt-5'>
+            <Spinner animation="border" variant="info" />
+        </div>
+
+    }
+    if(user){
+        navigate('/');
+    }
+    const signup = async (event) => {
         event.preventDefault();
-        const email=emailInput.current.value;
-        const name=nameInput.current.value;
-        const password=passwordInput.current.value;
-        console.log(email,password)
-        
+        const email = emailInput.current.value;
+        const name = nameInput.current.value;
+        const password = passwordInput.current.value;
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
     }
     return (
-        <Form onSubmit={signup} className='w-25 p-5 shadow-lg mx-auto mt-5 rounded'>
+        <Form onSubmit={signup} className='w-25 p-5 shadow-lg mx-auto mt-5 rounded mb-5'>
             <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Your name</Form.Label>
                 <Form.Control ref={nameInput} type="text" placeholder="Enter name" />
@@ -33,8 +55,10 @@ const SignUp = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control ref={passwordInput} type="password" placeholder="Password" />
             </Form.Group>
-           <button className='btn signin w-100'>Sign Up</button>
-           <p className='pt-4'>Already have an account? <Link to='/login' style={{color:'#1CB0E6'}} className='text-decoration-none'>Please log in </Link></p>
+            { errors}
+            <button className='btn signup-btn w-100'>Sign Up</button>
+            <p className='pt-4'>Already have an account? <Link to='/login' style={{ color: '#1CB0E6' }} className='text-decoration-none'>Please log in </Link></p>
+            <Social></Social>
         </Form>
     );
 };
