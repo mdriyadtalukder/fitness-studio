@@ -21,7 +21,7 @@ const LogIn = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    const [sendPasswordResetEmail, sending,error1] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
     let from = location.state?.from?.pathname || "/";
     let errors;
     if (error || error1) {
@@ -34,7 +34,7 @@ const LogIn = () => {
 
     }
     if (user) {
-        navigate(from,{replace:true});
+        navigate(from, { replace: true });
     }
     const login = event => {
         event.preventDefault();
@@ -46,10 +46,10 @@ const LogIn = () => {
     const forgetPassword = async () => {
         const email = emailInput.current.value;
         await sendPasswordResetEmail(email);
-        if(email){
+        if (email) {
             toast('Sent email');
         }
-        else{
+        else {
             toast('please enter your email');
 
         }

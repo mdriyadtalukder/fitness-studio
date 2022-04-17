@@ -1,15 +1,23 @@
-.anchor{
- text-decoration: none;
- color: white;
+.anchor {
+    text-decoration: none;
+    color: white;
 }
-.anchor:hover{
+
+.anchor:hover {
     color: #1CB0E6;
 }
-.h,.p{
+
+.h,
+.p {
     margin-bottom: 0 !important;
     color: white;
 }
-.footerr,.footer-card-body,.footer-card,.footer-col,.footer-row{
+
+.footerr,
+.footer-card-body,
+.footer-card,
+.footer-col,
+.footer-row {
     background-color: black;
     border: none !important;
 }

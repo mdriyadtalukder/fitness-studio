@@ -10,17 +10,17 @@ const CheckOut = () => {
     const phoneInput = useRef('');
     const adressInput = useRef('');
 
-    const fillUp=event=>{
+    const fillUp = event => {
         event.preventDefault();
         const email = emailInput.current.value;
         const name = nameInput.current.value;
         const phone = phoneInput.current.value;
         const adress = adressInput.current.value;
-        if(email && name && phone && adress ){
+        if (email && name && phone && adress) {
             toast('Confirm submit!!');
 
         }
-        else{
+        else {
             toast('Please fill up the full form.');
 
         }
@@ -45,10 +45,10 @@ const CheckOut = () => {
                     <Form.Label>Your Adress</Form.Label>
                     <Form.Control ref={adressInput} type="text" placeholder="Adress" />
                 </Form.Group>
-              <div className='text-center'>
-              <button className='btn submit-btn rounded-pill'>Submit</button>
-              </div>
-              <ToastContainer ></ToastContainer>
+                <div className='text-center'>
+                    <button className='btn submit-btn rounded-pill'>Submit</button>
+                </div>
+                <ToastContainer ></ToastContainer>
 
             </Form>
         </div>

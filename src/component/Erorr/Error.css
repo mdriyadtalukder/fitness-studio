@@ -10,11 +10,12 @@
     padding-top: 120px !important;
 }
 
-.error-btn{
+.error-btn {
     background-color: #1CB0E6 !important;
     color: white !important;
 }
-.error-btn:hover{
+
+.error-btn:hover {
     background-color: white !important;
     color: #1CB0E6 !important;
     border: 1px solid #1CB0E6;

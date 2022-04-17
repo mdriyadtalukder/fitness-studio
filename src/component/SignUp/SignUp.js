@@ -29,7 +29,7 @@ const SignUp = () => {
         </div>
 
     }
-    if(user){
+    if (user) {
         navigate('/');
     }
     const signup = async (event) => {
@@ -55,7 +55,7 @@ const SignUp = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control ref={passwordInput} type="password" placeholder="Password" />
             </Form.Group>
-            { errors}
+            {errors}
             <button className='btn signup-btn w-100'>Sign Up</button>
             <p className='pt-4'>Already have an account? <Link to='/login' style={{ color: '#1CB0E6' }} className='text-decoration-none'>Please log in </Link></p>
             <Social></Social>

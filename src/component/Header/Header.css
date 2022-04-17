@@ -2,7 +2,9 @@
     color: #1CB0E6 !important;
     border-bottom: 2px solid #1CB0E6 !important;
 }
-.singout-btn,.logIn-btn{
- background-color: #1CB0E6 !important;
- font-weight: bold !important;
+
+.singout-btn,
+.logIn-btn {
+    background-color: #1CB0E6 !important;
+    font-weight: bold !important;
 }

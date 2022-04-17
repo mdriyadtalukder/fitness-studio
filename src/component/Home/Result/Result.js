@@ -11,7 +11,7 @@ const Result = () => {
                 <div className='col mb-4'>
                     <div className='card h-100 shadow rouded'>
                         <div className='card-body pb-5'>
-                            <img src={img} className='img-fluid' style={{height:'450px'}} alt="" />
+                            <img src={img} className='img-fluid' style={{ height: '450px' }} alt="" />
                             <p className='pt-5'>" Working from home meant my body felt stiffer, my energy plummeted and my motivation to train was non-existent.I've got my energy back, and have ended up with a physique better than even when I was in my 20s! "</p>
                             <p className='pt-3 fw-bold'>- Dave Wood</p>
                         </div>
@@ -20,7 +20,7 @@ const Result = () => {
                 <div className='col mb-4'>
                     <div className='card h-100 shadow rouded'>
                         <div className='card-body pb-5'>
-                            <img src={img2} className='img-fluid' style={{height:'450px'}} alt="" />
+                            <img src={img2} className='img-fluid' style={{ height: '450px' }} alt="" />
                             <p className='pt-5'>" I love our training and never get bored, it helps me balance my busy life as a mum and gives me the time to focus on myself. Best decision I ever made was booking my first session at The Armoury! "</p>
                             <p className='pt-3 fw-bold'>- John Devid</p>
                         </div>
