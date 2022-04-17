@@ -23,7 +23,7 @@ const Home = () => {
                     <small>  In just 42 days we'll take you from feeling frustrated with your current trajectory, to feeling proud of the positive habits you've built</small>
                 </div>
                 <div className='text-center'>
-                    <Link to='/aboutus' className='btn  aboutus rounded-pill pt-2 pb-2 ps-4 pe-4'>ABOUT US</Link>
+                    <Link to='/aboutme' className='btn  aboutus rounded-pill pt-2 pb-2 ps-4 pe-4'>ABOUT ME</Link>
 
                 </div>
             </section>
