@@ -1,0 +1,10 @@
+.submit-btn{
+    background-color: #1CB0E6 !important;
+
+}
+
+
+@media only screen and (max-width:688px) {}
+
+
+@media only screen and (min-width:688px) and (max-width:992px) {}
