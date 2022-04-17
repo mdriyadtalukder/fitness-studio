@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Nav } from 'react-bootstrap';
+import {  Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Error.css'
 
@@ -12,7 +12,7 @@ const Erorr = () => {
                 <h4>Error - Page Not Found</h4>
                 <p className='fw-bold'>Please check the URL.</p>
                 <p>Otherwise, click the button to be redirected to the homepage.</p>
-                <Nav.Link as={Link} active className='fs-5' to="/"> <button className='btn'>Go to home page</button>{' '}</Nav.Link>
+                <Nav.Link as={Link} active className='fs-5' to="/"> <button className='btn error-btn rounded-pill'>Go to home page</button>{' '}</Nav.Link>
             </div>
         </div>
     );
